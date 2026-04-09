@@ -24,4 +24,4 @@ Client → API Gateway → Rate Limiter → Service
 3. Run api-gateway
 
 ## Test
-curl http://localhost:8080/api/test
+curl -H "X-USER-ID: khushi123" http://localhost:8081/api/test
