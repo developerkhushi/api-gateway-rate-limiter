@@ -5,8 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
-import java.time.Duration;
-
 @Service
 @RequiredArgsConstructor
 public class RateLimiterService {
@@ -17,7 +15,6 @@ public class RateLimiterService {
 
     public Mono<Boolean> allowRequest(String key) {
         long now = System.currentTimeMillis();
-
         return repository.get(key)
                 .flatMap(value -> {
                     // Parse tokens and last refill time
@@ -30,12 +27,14 @@ public class RateLimiterService {
                     int refill = (int) (elapsed * REFILL_RATE);
                     tokens = Math.min(CAPACITY, tokens + refill);
 
+                    System.out.println("Tokens left : " + tokens);
                     if (tokens > 0) {
                         tokens--; // consume 1 token
                         return repository.save(key, tokens + ":" + now)
                                 .thenReturn(true);
                     } else {
                         // No tokens left, reject
+                        System.out.println("Request Rejected !!");
                         return Mono.just(false);
                     }
                 })
