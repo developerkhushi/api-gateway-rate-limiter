@@ -1,7 +1,0 @@
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/repository/RateLimiterRepository.java
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/ApiGatewayApplication.java
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/config/RedisConfig.java
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/model/TokenBucket.java
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/repository/RedisRateLimiterRepository.java
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/filter/RateLimiterFilter.java
-/Users/khushboosingh/Desktop/Workspace/rate-limiter-system/api-gateway/src/main/java/dev/khushi/apigateway/service/RateLimiterService.java
